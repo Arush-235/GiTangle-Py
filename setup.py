@@ -3,20 +3,20 @@ import os
 class setup(object):
     def init():
         self.is_IPFS, self.is_IRI, self.is_pystuff = False, False, False
-        if not os.path.isdir("/home/GiTangle"):
-            os.system("mkdir /home/GiTangle")
-        if not os.path.isdir("/home/GiTangle/IRI"):
+        if not os.path.isdir("/usr/bin/GiTangle"):
+            os.system("mkdir /usr/bin/GiTangle")
+        if not os.path.isdir("/usr/bin/GiTangle/IRI"):
             self.is_IRI = True
-        if not os.path.isdir("/home/GiTangle/IPFS"):
+        if not os.path.isdir("/usr/bin/GiTangle/IPFS"):
             self.is_IPFS = True
-        if not os.path.isdir("/home/GiTangle/pygit"):
+        if not os.path.isdir("/usr/bin/GiTangle/pygit"):
             self.is_pystuff = True
         
         
 
     def install_IRI(self):
         if not self.is_IRI:
-            os.system("cd ~ && cd /home/GiTangle")
+            os.system("cd ~ && cd /usr/bin/GiTangle")
             os.system("mkdir IRI && cd IRI")
             os.system("git clone https://github.com/iotaledger/iri")
             os.system("cd iri")
@@ -25,7 +25,7 @@ class setup(object):
 
     def install_IPFS(self):
         if not self.is_IPFS:
-            os.system("cd ~ && cd /home/GiTangle/")
+            os.system("cd ~ && cd /usr/bin/GiTangle/")
             os.system("mkdir IPFS")
             os.system("cd IPFS")
             os.system("wget https://dist.ipfs.io/go-ipfs/v0.4.19/go-ipfs_v0.4.19_linux-amd64.tar.gz")
@@ -35,7 +35,7 @@ class setup(object):
     
     def install_pystuff(self):
         if not self.is_pystuff:
-            os.system("cd ~ && cd /home/GiTangle/")
+            os.system("cd ~ && cd /usr/bin/GiTangle/")
             os.system("pip3 install ipfsapi")
             os.system("pip3 install github")
             os.system("pip3 install zerorpc")
@@ -51,7 +51,7 @@ class setup(object):
 
     def initialize():
         os.system("cd ~")
-        os.system("java -jar /home/IRI/iri*.jar -p 14265")
+        os.system("java -jar /usr/bin/GiTangle/IRI/iri*.jar -p 14265")
         os.system("ipfs daemon")
 
 s = setup()
