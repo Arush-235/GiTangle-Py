@@ -1,7 +1,7 @@
 import os
 
 class setup(object):
-    def init():
+    def __init__(self):
         self.is_IPFS, self.is_IRI, self.is_pystuff = False, False, False
         if not os.path.isdir("/usr/bin/GiTangle"):
             os.system("sudo mkdir /usr/bin/GiTangle")
