@@ -39,6 +39,8 @@ class setup(object):
             os.system("pip3 install ipfsapi")
             os.system("pip3 install github")
             os.system("pip3 install zerorpc")
+            os.system("pip3 install pygit2")
+            os.system("pip3 install pyqrcode")
             os.system("sudo mkdir pygit && cd pygit")
             os.system("sudo wget https://github.com/libgit2/libgit2/archive/v0.27.0.tar.gz")
             os.system("sudo tar xzf v0.27.0.tar.gz")
@@ -46,7 +48,7 @@ class setup(object):
             os.system("sudo cmake .")
             os.system("sudo make")
             os.system("sudo make install")
-            os.system("pip3 install pygit2")
+
 
 
     def initialize():
