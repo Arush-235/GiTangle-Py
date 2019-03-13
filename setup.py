@@ -50,6 +50,7 @@ class setup(object):
 
 
     def initialize():
+        os.system("cd ~")
         os.system("java -jar /home/IRI/iri*.jar -p 14265")
         os.system("ipfs daemon")
 
