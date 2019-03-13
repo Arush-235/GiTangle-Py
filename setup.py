@@ -3,13 +3,15 @@ import os
 class setup(object):
     def init():
         self.is_IPFS, self.is_IRI, self.is_pystuff = False, False, False
-        if not os.path.isdir("/home/IRI")
+        if not os.path.isdir("/home/GiTangle"):
+            os.system("mkdir /home/GiTangle")
+        if not os.path.isdir("/home/GiTangle/IRI"):
             self.is_IRI = True
-        if not os.path.isdir("/home/IPFS")
+        if not os.path.isdir("/home/GiTangle/IPFS"):
             self.is_IPFS = True
-        if not os.path.isdir("/home/pygit")
+        if not os.path.isdir("/home/GiTangle/pygit"):
             self.is_pystuff = True
-        os.system("mkdir home/GiTangle")
+        
         
 
     def install_IRI(self):
