@@ -30,8 +30,8 @@ class setup(object):
             os.system("cd IPFS")
             os.system("sudo wget https://dist.ipfs.io/go-ipfs/v0.4.19/go-ipfs_v0.4.19_linux-amd64.tar.gz")
             os.system("sudo tar xvfz go-ipfs.tar.gz")
-            os.system("sudo cd go-ipfs")
-            os.system("./install.sh")
+            os.system("cd go-ipfs")
+            os.system("sudo ./install.sh")
     
     def install_pystuff(self):
         if not self.is_pystuff:
